@@ -8,9 +8,10 @@ public class ToDo {
     private String toDo;
     private boolean isCompleted;
 
-    public ToDo(String toDo) {
+    public ToDo(String toDo, UUID userId) {
         this.id = UUID.randomUUID();
         this.toDo = toDo;
+        this.userId = userId;
     }
 
     public UUID getUserId() {

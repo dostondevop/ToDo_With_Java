@@ -18,15 +18,31 @@ public class Main {
         int stepCode = 10;
         while (stepCode != 0) {
             System.out.println("1.Register, 2.Login, 0.Exit");
-            System.out.print("Enter number: ");
             int stepCode1 = scInt.nextInt();
             switch (stepCode1) {
                 case 0 -> stepCode = 0;
-                //case 1 ->
+                case 1 -> {
+                    register();
+                }
                 case 2 -> {
                     login();
                 }
             }
+        }
+    }
+
+    private static void register() {
+        System.out.println("Enter your username: ");
+        String username=scStr.nextLine();
+        System.out.println("Enter your password: ");
+        String password=scStr.nextLine();
+        User user = new User(username, password);
+        User isAdded = userService.addUser(user);
+        if (isAdded!=null) {
+            System.out.println("User registered successfully.");
+        }
+        else {
+            System.out.println("User not registered.");
         }
     }
 
@@ -37,17 +53,16 @@ public class Main {
         String password = scStr.nextLine();
         User user = userService.login(username, password);
         if (user != null) {
-            System.out.println(username + " is successfully added");
+            System.out.println(username + " is successfully logged in");
             int stepCodeLogin = 10;
             while (stepCodeLogin != 0) {
                 System.out.println("1. Add todo, 2.Complete todo, 3.List todo");
-                System.out.print("Enter number: ");
                 int stepCode2 = scInt.nextInt();
                 switch (stepCode2) {
                     case 1 -> {
                         System.out.println("Enter todo: ");
                         String todo = scStr.nextLine();
-                        ToDo toDo = new ToDo(todo);
+                        ToDo toDo = new ToDo(todo, user.getId());
                         toDoService.add(toDo);
                     }
                     case 2 -> {
