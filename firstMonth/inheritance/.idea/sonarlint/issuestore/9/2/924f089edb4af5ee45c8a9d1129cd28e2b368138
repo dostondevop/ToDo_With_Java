@@ -1,0 +1,18 @@
+
+7
+java:S1220""Move this file to a named package.8›ÆÎðý1
+[
+java:S1854"9Remove this useless assignment to local variable "cat11".(—žêÛùÿÿÿÿ8Û„Ôðý1
+S
+java:S1854"6Remove this useless assignment to local variable "aL".(˜Ä¥÷8¡ÆÎðý1
+\
+java:S1854":Remove this useless assignment to local variable "animal".(¹¯ëÏüÿÿÿÿ8¼’Òðý1
+G	java:S106"+Replace this use of System.out by a logger.(Ž¸¿ª8£ÆÎðý1
+M
+java:S1481"+Remove this unused "animal" local variable.(¹¯ëÏüÿÿÿÿ8¤ÆÎðý1
+D
+java:S1905"'Remove this unnecessary cast to "long".(˜Ä¥÷8¤ÆÎðý1
+D
+java:S1481"'Remove this unused "aL" local variable.(˜Ä¥÷8¥ÆÎðý1
+L
+java:S1481"*Remove this unused "cat11" local variable.(—žêÛùÿÿÿÿ8ß„Ôðý1
