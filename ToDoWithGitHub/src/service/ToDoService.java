@@ -31,10 +31,10 @@ public class ToDoService {
     public List<ToDo> getUserToDos(UUID UserId) {
         List<ToDo> userToDos=new ArrayList<>();
         for (ToDo toDo :list){
-            if (toDo != null && toDo.getUserId().equals(UserId)){
+            if (toDo.getUserId().equals(UserId)){
                 userToDos.add(toDo);
             }
         }
         return userToDos;
     }
-}
+}git 
